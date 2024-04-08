@@ -9,17 +9,17 @@
 int factorize(char *buffer)
 {
 
-	u_int32_t num;
-	u_int32_t i;
+	u_int64_t num;
+	u_int64_t i;
 
-	num = atoi(buffer);
+	num = atol(buffer);
 
 
 	for (i = 2; i < num; i++)
 	{
 		if (num % i == 0)
 		{
-			printf("%d=%d*%d\n", num, num / i, i);
+			printf("%ld=%ld*%ld\n", num, num / i, i);
 			break;
 		}
 	}
